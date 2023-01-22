@@ -14,15 +14,5 @@ export const proposaltoVote = writable({
 
 export const hasvoted = writable(false);
 
-export const dialog = writable({
-    isOpen: false,
-    open : function() {
-        this.isOpen = true;
-    },
-    close: function() {
-        this.isOpen = false;
-    }
-})
-
 export const principal = writable(null);
 export const daoActor = writable(null);

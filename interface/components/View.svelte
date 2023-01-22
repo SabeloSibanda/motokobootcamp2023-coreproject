@@ -4,19 +4,16 @@
   import { daoActor, principal } from "../stores"
 
   async function get_all_proposals() {
-    let dao = get(daoActor)
+    let dao = get(daoActor);
     if (!dao) {
       return
     }
+    console.log("Principal", principal)
     let res = await dao.get_all_proposals()
     console.log("Proposals", res)
-    if (res.length !== 0) {
-      return res
-    } else {
-      throw new Error("No proposal has been created yet")
-    }
+    return res
   }
-  let promise = get_all_proposals()
+  let promise =  get_all_proposals()
 </script>
 
 {#if $principal}
