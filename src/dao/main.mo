@@ -10,7 +10,7 @@ actor {
     };
 
     // Keep track of all proposals
-    var proposals = [(Int, Proposal)];
+    var proposals = [(Int, Proposal)][];
     var next_id = 1;
 
     // Keep track of MB token balance for each member
