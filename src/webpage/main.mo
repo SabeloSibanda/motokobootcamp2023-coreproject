@@ -1,3 +1,7 @@
 actor {
-    //Here comes the webpage
+    public var text: Text;
+
+    public shared func update_text(new_text: Text) : async {
+        text = new_text;
+    }
 };
