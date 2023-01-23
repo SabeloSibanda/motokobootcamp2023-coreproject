@@ -1,7 +1,13 @@
 import type { Principal } from '@dfinity/principal';
 import type { ActorMethod } from '@dfinity/agent';
 
-export type Proposal = {};
+export interface Proposal {
+  'id' : bigint,
+  'principal' : Principal,
+  'vote_for' : bigint,
+  'text' : string,
+  'vote_against' : bigint,
+}
 export interface _SERVICE {
   'get_all_proposals' : ActorMethod<[], Array<[bigint, Proposal]>>,
   'get_proposal' : ActorMethod<[bigint], [] | [Proposal]>,

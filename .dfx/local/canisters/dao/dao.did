@@ -1,4 +1,11 @@
-type Proposal = record {};
+type Proposal = 
+ record {
+   id: int;
+   "principal": principal;
+   "text": text;
+   vote_against: nat;
+   vote_for: nat;
+ };
 service : {
   get_all_proposals: () -> (vec record {
                                   int;

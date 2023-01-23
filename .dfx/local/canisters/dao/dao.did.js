@@ -1,5 +1,11 @@
 export const idlFactory = ({ IDL }) => {
-  const Proposal = IDL.Record({});
+  const Proposal = IDL.Record({
+    'id' : IDL.Int,
+    'principal' : IDL.Principal,
+    'vote_for' : IDL.Nat,
+    'text' : IDL.Text,
+    'vote_against' : IDL.Nat,
+  });
   return IDL.Service({
     'get_all_proposals' : IDL.Func(
         [],
