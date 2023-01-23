@@ -1,0 +1,14 @@
+// Version: 1.0.0
+type Proposal =
+  {
+    id : Int;
+    principal : Principal;
+    text : Text;
+    vote_against : Nat;
+    vote_for : Nat
+  };
+actor {
+  stable var MB_tokens : Nat;
+  stable var persistor : [(Int, Proposal)];
+  stable var proposalId : Int
+};

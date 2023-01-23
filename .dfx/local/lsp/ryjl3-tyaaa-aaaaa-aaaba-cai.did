@@ -1,0 +1,26 @@
+type Proposal = 
+ record {
+   id: int;
+   "principal": principal;
+   "text": text;
+   vote_against: nat;
+   vote_for: nat;
+ };
+service : {
+  get_all_proposals: () -> (vec record {
+                                  int;
+                                  Proposal;
+                                }) query;
+  get_proposal: (int) -> (opt Proposal) query;
+  submit_proposal: (text) -> (variant {
+                                Err: text;
+                                Ok: Proposal;
+                              });
+  vote: (int, bool) -> (variant {
+                          Err: text;
+                          Ok: record {
+                                nat;
+                                nat;
+                              };
+                        });
+}
