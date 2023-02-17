@@ -9,7 +9,7 @@
   "dependencies": {
     "@dfinity/agent": "0.13.3",
     "@dfinity/principal": "0.13.3",
-    "esbuild": "0.17.4",
+    "esbuild": "0.17.5",
     "flowbite-svelte": "^0.29.10",
     "svelte-heros": "^2.4.3"
   },
