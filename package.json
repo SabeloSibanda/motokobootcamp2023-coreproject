@@ -11,7 +11,7 @@
     "@dfinity/principal": "0.13.3",
     "esbuild": "0.17.4",
     "flowbite-svelte": "^0.29.10",
-    "svelte-heros": "^2.4.3"
+    "svelte-heros": "^2.5.1"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "next",
